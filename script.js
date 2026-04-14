@@ -105,6 +105,7 @@ const img = document.getElementById("card-img");
 const title = document.getElementById("card-title");
 const text = document.getElementById("card-text");
 const button = document.getElementById("btn-randomize");
+const inputNumero = document.getElementById("input-numero");
 
 function gerarDate() {
   title.textContent = "Sorteando...";
@@ -135,11 +136,25 @@ function enviarDate() {
   
   const mensagemCodificada = encodeURIComponent(mensagem);
 
-  const numero = "5513996763170";
+  const numero = inputNumero.value.replace(/\D/g, "");
+  if (!numeroValido(numero)) {
+    alert("Digite um número válido com DDD");
+    return;
+  }
+  localStorage.setItem("numero", numero);
   const link = `https://wa.me/${numero}?text=${mensagemCodificada}`;
 
   window.open(link, "_blank");
 }
+
+function numeroValido(numero) {
+  return numero && numero.length >= 11;
+}
+
+const numeroSalvo = localStorage.getItem("numero");
+  if (numeroSalvo) {
+    inputNumero.value = numeroSalvo;
+  }
 
 const btnEnviar = document.getElementById("btn-submit");
 

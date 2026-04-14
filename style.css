@@ -40,13 +40,13 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
-    margin: 40px auto;
+    margin: 30px auto;
     width: 100%;
     max-width: 300px;
 }
 
 .container-card {
-    margin: 2em 0 1em;
+    margin: 2em 0 0;
 }
 
 .card {
@@ -97,6 +97,31 @@ main {
     border: none;
     cursor: pointer;
     transition: 0.3s;
+}
+
+.container-input {
+    width: 100%;
+}
+
+.container-input input {
+    width: 100%;
+    padding: 16px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    font-size: 12px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.container-input input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.container-input input:focus {
+    border: 2px solid var(--secondary-color);
+    background-color: var(--grey);
 }
 
 @media (max-width: 768px) {
