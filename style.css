@@ -100,7 +100,9 @@ main {
 }
 
 @media (max-width: 768px) {
-    margin: 60px auto;
+    main {
+        margin: 60px auto;
+    }
 }
     
 @media (hover: hover) {
