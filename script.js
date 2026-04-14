@@ -101,6 +101,8 @@ const dates = [
   }
 ];
 
+let dateGerado = false;
+
 const img = document.getElementById("card-img");
 const title = document.getElementById("card-title");
 const text = document.getElementById("card-text");
@@ -121,12 +123,18 @@ function gerarDate() {
     img.src = date.image;
     title.textContent = date.title;
     text.textContent = date.description;
+    dateGerado = true;
 
     document.querySelector(".card").style.opacity = "1";
   }, 1000);
 }
 
 function enviarDate() {
+  if(!dateGerado) {
+    alert("Você precisa sortear um date primeiro");
+    return;
+  }
+
   const tituloAtual = title.textContent;
   const descricaoAtual = text.textContent;
 
