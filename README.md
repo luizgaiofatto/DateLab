@@ -1,7 +1,7 @@
 # DateLab
 
 ## Link
-https://date-lab.vercel.app/
+https://date-lab.vercel.app
 
 DateLab é uma aplicação web que gera ideias de encontros de forma aleatória e permite compartilhar o resultado diretamente pelo WhatsApp.
 
