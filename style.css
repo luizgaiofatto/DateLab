@@ -99,8 +99,14 @@ main {
     transition: 0.3s;
 }
 
-.btn:hover {
-    background-color: var(--grey);
+@media (max-width: 768px) {
+    margin: 60px auto;
+}
+    
+@media (hover: hover) {
+    .btn:hover {
+        background-color: var(--grey);
+    }
 }
 
 .btn:active {
