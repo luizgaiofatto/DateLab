@@ -3,11 +3,11 @@
   "short_name": "DateLab",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#d3d3d3",
+  "background_color": "#970747",
   "theme_color": "#d3d3d3",
   "icons": [
     {
-      "src": "assets/icon192.png",
+      "src": "assets/fav1.png",
       "sizes": "96x96",
       "type": "image/png"
     },
