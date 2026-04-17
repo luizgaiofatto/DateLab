@@ -102,6 +102,7 @@ const dates = [
 ];
 
 let dateGerado = false;
+let ultimoIndex = null;
 
 const img = document.getElementById("card-img");
 const title = document.getElementById("card-title");
@@ -117,7 +118,16 @@ function gerarDate() {
   document.querySelector(".card").style.opacity = "0.5";
 
   setTimeout(() => {
-    const randomIndex = Math.floor(Math.random() * dates.length);
+    let randomIndex;
+      if (dates.length === 1) {
+        randomIndex = 0;
+      } else {
+        do {
+          randomIndex = Math.floor(Math.random() * dates.length);
+        } while (randomIndex === ultimoIndex);
+      }
+      ultimoIndex = randomIndex;
+      
     const date = dates[randomIndex];
 
     img.src = date.image;
