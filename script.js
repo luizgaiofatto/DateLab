@@ -113,7 +113,7 @@ const inputNumero = document.getElementById("input-numero");
 function gerarDate() {
   title.textContent = "Sorteando...";
   text.textContent = "Escolhendo o melhor date 👀";
-  img.src = "assets/white-empty.jpg";
+  img.src = "assets/images/white-empty.jpg";
 
   document.querySelector(".card").style.opacity = "0.5";
 
@@ -127,7 +127,7 @@ function gerarDate() {
         } while (randomIndex === ultimoIndex);
       }
       ultimoIndex = randomIndex;
-      
+
     const date = dates[randomIndex];
 
     img.src = date.image;
